@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -32,10 +33,20 @@ class MainActivity : AppCompatActivity() {
             val email : String = saisieEmail.text.toString()
             val mdp : String = saisieMdp.text.toString()
 
-            Log.d("ACT_CONN", "Connexion : $email/$mdp")
+            var user : Utilisateur? = Modele.findUtilisateur(email, mdp)
 
-            val intent = Intent(this, MenuRepasActivity::class.java )
-            startActivity(intent)
+            if (user != null){
+                Session.ouvrir(user)
+
+
+                val intent = Intent(this, MenuRepasActivity::class.java )
+                startActivity(intent)
+            }
+            else{
+                Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_LONG).show()
+            }
+
+            Log.d("ACT_CONN", "Tentative de Connexion : $email/$mdp")
         })
 
 

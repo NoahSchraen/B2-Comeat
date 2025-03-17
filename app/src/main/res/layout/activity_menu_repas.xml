@@ -13,11 +13,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
         android:layout_marginBottom="476dp"
-        android:text="Bienvenue sur MenuRepas"
+        android:text="Bienvenue sur MenuRepas (temp)"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btnRecherche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Rechercher un repas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnParticipations"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenue" />
+
+    <Button
+        android:id="@+id/btnParticipations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Mes Participations"
+        app:layout_constraintEnd_toStartOf="@+id/btnRecherche"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenue" />
 </androidx.constraintlayout.widget.ConstraintLayout>

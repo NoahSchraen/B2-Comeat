@@ -3,7 +3,8 @@ package com.example.comeat
 object Modele {
     val utilisateurs : MutableList<Utilisateur> = mutableListOf(
         Utilisateur(1, "LOTHBROK", "Ragnar" , "ragnar@lothbrok@gmail.com", "Odin@Thor"),
-        Utilisateur(2, "LOTHBROK", "Lagertha", "lagertha.lothbrok@gmail.com","Loki&Freyja")
+        Utilisateur(2, "LOTHBROK", "Lagertha", "lagertha.lothbrok@gmail.com","Loki&Freyja"),
+        Utilisateur(3,"SCHRAEN", "Noah", "test", "test")
     )
     fun findUtilisateur(email : String , mdp : String ) : Utilisateur? {
         for (utilisateur in utilisateurs){

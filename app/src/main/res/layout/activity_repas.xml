@@ -7,4 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".RepasActivity">
 
+    <TextView
+        android:id="@+id/Greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="235dp"
+        android:text="Liste des repas à venir (RepasActivity)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
