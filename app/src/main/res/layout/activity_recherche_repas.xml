@@ -8,13 +8,43 @@
     tools:context=".RechercheRepasActivity">
 
     <TextView
-        android:id="@+id/tvGreeting"
+        android:id="@+id/tvSpecialite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="Sélection de la date :"
+        android:layout_marginBottom="16dp"
+        android:text="Sélection de la spécialité :"
+        app:layout_constraintBottom_toTopOf="@+id/spSpecialites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRechercheConfirmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="359dp" />
+
+    <Spinner
+        android:id="@+id/spSpecialites"
+        android:layout_width="185dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sélectionner la date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="285dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,8 +37,6 @@ class MainActivity : AppCompatActivity() {
 
             if (user != null){
                 Session.ouvrir(user)
-
-
                 val intent = Intent(this, MenuRepasActivity::class.java )
                 startActivity(intent)
             }
