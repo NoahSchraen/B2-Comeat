@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import org.w3c.dom.Text
+import Utilisateur
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             var user : Utilisateur? = Modele.findUtilisateur(email, mdp)
 
+            //verification des données pour se connecter
             if (user != null){
                 Session.ouvrir(user)
                 val intent = Intent(this, MenuRepasActivity::class.java )
