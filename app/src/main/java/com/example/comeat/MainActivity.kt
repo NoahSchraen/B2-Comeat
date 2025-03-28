@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val btnValider: Button = findViewById(R.id.btnValider)
 
         btnValider.setOnClickListener({
+            //Récupération de l'adresse mail et du mot de passe
             val email : String = saisieEmail.text.toString()
             val mdp : String = saisieMdp.text.toString()
 
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else{
+                //alerte identifiants incorrects
                 Toast.makeText(this, "Identifiants incorrects", Toast.LENGTH_LONG).show()
             }
 

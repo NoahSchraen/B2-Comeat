@@ -180,8 +180,11 @@ object Modele {
         val repasSelect: MutableList<Repas> = mutableListOf()
 
         for( unRepas in repas ){
-            if( unRepas.estConvive( idUtilisateur ) == true && unRepas.date.isAfter( LocalDate.now() ) ){
-                repasSelect.add( unRepas )
+            //if( unRepas.estConvive( idUtilisateur ) == true && unRepas.date.isAfter( LocalDate.now() ) ){
+               // repasSelect.add( unRepas )
+            //}
+            if(unRepas.estConvive(idUtilisateur) == true){
+                repasSelect.add(unRepas)
             }
         }
 
